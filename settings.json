@@ -1,90 +1,268 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
+// Zed settings - https://zed.dev/docs/configuring-zed
 {
-  "wsl_connections": [
-    {
-      "distro_name": "UbuntuNidac",
-      "user": null,
-      "projects": [
-        {
-          "paths": ["/home/delcx/NIDAC/Projects/itid-gravity-monorepo/./"],
-        },
-      ],
-    },
-  ],
-  "minimap": {
-    "max_width_columns": 80,
-    "show": "always",
+  // Extensions
+  "auto_install_extensions": {
+    "django": true,
+    "git-firefly": true,
+    "html": true,
+    "odin": true,
+    "toml": true,
   },
-  "show_signature_help_after_edits": true,
-  "auto_signature_help": true,
-  "preferred_line_length": 120,
-  "soft_wrap": "preferred_line_length",
-  "rounded_selection": false,
-  "selection_highlight": false,
-  "current_line_highlight": "gutter",
-  "cursor_shape": "block",
-  "cursor_blink": false,
-  "agent_buffer_font_size": 12.0,
-  "scroll_beyond_last_line": "one_page",
-  "agent_ui_font_size": 16.0,
-  "ui_font_weight": 400.0,
-  "buffer_font_weight": 400.0,
-  "inlay_hints": {
-    "enabled": true,
-  },
-  "buffer_font_family": "Iosevka",
-  "buffer_font_features": {
-    "calt": true,
-  },
-  "ui_font_family": ".ZedMono",
-  "vim_mode": true,
-  "base_keymap": "VSCode",
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)",
-  },
-  "ui_font_size": 17.0,
-  //"buffer_font_size": 26.0,
-  //"buffer_font_size": 22.0,
-  "buffer_font_size": 26,
+
+  // Theme
   "theme": {
     "mode": "dark",
     "light": "Dracula Light (Alucard)",
     "dark": "Delinx Dark Modern 2026",
   },
-  "disable_ai": true,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+
+  // UI fonts
+  "ui_font_family": ".ZedMono",
+  "ui_font_size": 17.0,
+  "ui_font_weight": 400.0,
+
+  // Buffer fonts
+  "buffer_font_family": "Iosevka",
+  "buffer_font_size": 26,
+  "buffer_font_weight": 400.0,
+  "buffer_font_features": { "calt": true },
+  "buffer_line_height": { "custom": 1.5 },
+
+  // Agent fonts
+  "agent_buffer_font_size": 12.0,
+  "agent_ui_font_size": 16.0,
+
+  // Vim
+  "vim_mode": true,
+  "base_keymap": "VSCode",
   "command_aliases": {
+    "Q": "q",
     "W": "w",
     "Wq": "wq",
-    "Q": "q",
   },
-  "lsp": {
-    "pyright": {
-      "settings": {
-        "pyright": {
-          "disableOrganizeImports": true,
-        },
+
+  // Cursor
+  "cursor_shape": "block",
+  "cursor_blink": false,
+  "hide_mouse": "never",
+
+  // Selection & highlighting
+  "current_line_highlight": "gutter",
+  "rounded_selection": false,
+  "selection_highlight": false,
+
+  // Lines & wrapping
+  "preferred_line_length": 120,
+  "relative_line_numbers": "disabled",
+  "soft_wrap": "preferred_line_length",
+
+  // Scrolling
+  "autoscroll_on_clicks": false,
+  "scroll_beyond_last_line": "one_page",
+  "vertical_scroll_margin": 2,
+
+  // Indentation
+  "auto_indent": true,
+  "auto_indent_on_paste": true,
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "disabled",
+  },
+
+  // Saving
+  "autosave": "off",
+  "close_on_file_delete": false,
+  "format_on_save": "on",
+
+  // Completions & hints
+  "auto_signature_help": true,
+  "hover_popover_enabled": false,
+  "inlay_hints": { "enabled": true },
+  "show_completions_on_input": false,
+  "show_signature_help_after_edits": true,
+  "use_autoclose": false,
+  "use_smartcase_search": true,
+  "completions": {
+    "words": "enabled",
+    "words_min_length": 2,
+    "lsp": true,
+    "lsp_fetch_timeout_ms": 0,
+    "lsp_insert_mode": "replace",
+  },
+
+  // Gutter
+  "gutter": {
+    "line_numbers": true,
+    "min_line_number_digits": 4,
+    "breakpoints": false,
+    "folds": false,
+    "runnables": false,
+  },
+
+  // Scrollbar
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "diagnostics": "all",
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "selected_text": true,
+    "axes": {
+      "horizontal": true,
+      "vertical": true,
+    },
+  },
+
+  // Minimap
+  "minimap": {
+    "show": "always",
+    "max_width_columns": 80,
+  },
+
+  // Tabs
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": true,
+  },
+  "tabs": {
+    "activate_on_close": "history",
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+    "show_close_button": "hidden",
+    "show_diagnostics": "errors",
+  },
+
+  // Toolbar
+  "toolbar": {
+    "breadcrumbs": true,
+    "code_actions": true,
+    "quick_actions": true,
+    "agent_review": false,
+    "selections_menu": false,
+  },
+
+  // Status bar
+  "status_bar": {
+    "active_language_button": true,
+    "cursor_position_button": true,
+    "line_endings_button": true,
+  },
+
+  // Project panel
+  "project_panel": {
+    "dock": "right",
+    "default_width": 240,
+    "button": true,
+    "starts_open": true,
+    "entry_spacing": "standard",
+    "indent_size": 12,
+    "sort_mode": "directories_first",
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "drag_and_drop": true,
+    "file_icons": false,
+    "folder_icons": false,
+    "git_status": true,
+    "hide_hidden": false,
+    "hide_root": false,
+    "show_diagnostics": "errors",
+    "sticky_scroll": false,
+    "indent_guides": { "show": "always" },
+    "scrollbar": { "show": "never" },
+    "auto_open": {
+      "on_create": true,
+      "on_drop": true,
+      "on_paste": true,
+    },
+  },
+
+  // Git panel
+  "git_panel": {
+    "dock": "left",
+    "default_width": 360,
+    "button": true,
+    "collapse_untracked_diff": true,
+    "fallback_branch_name": "master",
+    "sort_by_path": true,
+    "status_style": "label_color",
+    "scrollbar": { "show": null },
+  },
+
+  // Git
+  "git": {
+    "git_gutter": "tracked_files",
+    "hunk_style": "unstaged_hollow",
+    "inline_blame": { "enabled": false },
+    "branch_picker": { "show_author_name": true },
+  },
+
+  // Terminal
+  "terminal": {
+    "dock": "bottom",
+    "default_width": 640,
+    "default_height": 320,
+    "button": true,
+    "shell": "system",
+    "working_directory": "current_project_directory",
+    "alternate_scroll": "off",
+    "blinking": "terminal_controlled",
+    "copy_on_select": false,
+    "keep_selection_on_copy": true,
+    "minimum_contrast": 45,
+    "option_as_meta": false,
+    "scroll_multiplier": 3.0,
+    "env": {},
+    "font_family": null,
+    "font_features": null,
+    "font_size": null,
+    "line_height": { "custom": 1.5 },
+    "toolbar": { "breadcrumbs": false },
+    "scrollbar": { "show": null },
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default",
       },
     },
+  },
+
+  // Dock
+  "bottom_dock_layout": "full",
+
+  // LSP
+  "lsp": {
     "ols": {
       "binary": {
         "path": "C:/ols/ols.exe",
         "arguments": [],
       },
     },
+    "pyright": {
+      "settings": {
+        "pyright": { "disableOrganizeImports": true },
+      },
+    },
   },
+
+  // Languages
   "languages": {
-    "Python": {
-      "code_actions_on_format": {
-        "source.organizeImports.ruff": false,
+    "C": {
+      "formatter": {
+        "external": {
+          "command": "C:/Program Files (x86)/Caphyon/Clang Format Editor/clang-format.exe",
+          "arguments": ["--style=file", "--assume-filename={buffer_path}"],
+        },
       },
     },
     "Odin": {
@@ -95,27 +273,44 @@
         },
       },
     },
-    "C": {
-      "formatter": {
-        "external": {
-          "command": "C:/Program Files (x86)/Caphyon/Clang Format Editor/clang-format.exe",
-          "arguments": ["--style=file", "--assume-filename={buffer_path}"],
-        },
+    "Python": {
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": false,
       },
     },
   },
-  "format_on_save": "on",
-  "gutter": {
-    "line_numbers": true,
-    "runnables": false,
-    "breakpoints": false,
-    "folds": true,
-    "min_line_number_digits": 2,
+
+  // File scanning
+  "file_scan_exclusions": [
+    "**/.DS_Store",
+    "**/.classpath",
+    "**/.git",
+    "**/.hg",
+    "**/.jj",
+    "**/.settings",
+    "**/.svn",
+    "**/CVS",
+    "**/Thumbs.db",
+  ],
+  "file_scan_inclusions": [".env*"],
+  "file_types": {
+    "Shell Script": [".env.*"],
   },
-  "project_panel": {
-    "dock": "right",
+
+  // WSL
+  "wsl_connections": [
+    {
+      "distro_name": "UbuntuNidac",
+      "user": null,
+      "projects": [{ "paths": ["/home/delcx/NIDAC/Projects/itid-gravity-monorepo/./"] }],
+    },
+  ],
+
+  // Privacy & updates
+  "auto_update": true,
+  "disable_ai": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
   },
-  "hover_popover_enabled": false,
-  "relative_line_numbers": "disabled",
-  "vertical_scroll_margin": 2,
 }
