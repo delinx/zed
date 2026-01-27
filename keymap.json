@@ -1,0 +1,69 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {},
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g b": "pane::GoBack",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space c": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f p": "pane::DeploySearch",
+      "space w": "pane::CloseActiveItem",
+      "space n": "tab_switcher::Toggle",
+      "space space": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-s": "pane::ActivatePreviousItem",
+      "ctrl-t": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "EmptyPane",
+    "bindings": {
+      "space space": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f p": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "ProjectPanel && !editing",
+    "bindings": {
+      "space space": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f p": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      //"ctrl-u": ["action::Sequence", [["workspace::SendKeystrokes", "4 k"], "editor::ScrollCursorCenter"]],
+      //"ctrl-d": ["action::Sequence", [["workspace::SendKeystrokes", "4 j"], "editor::ScrollCursorCenter"]],
+      "ctrl-u": ["workspace::SendKeystrokes", "4 ctrl-y"],
+      "ctrl-d": ["workspace::SendKeystrokes", "4 ctrl-e"],
+    },
+  },
+]
