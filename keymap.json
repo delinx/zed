@@ -19,7 +19,7 @@
   {
     "context": "(VimControl && !menu)",
     "bindings": {
-      "g b": "pane::GoBack",
+      "g b": "pane::GoToOlderTag",
     },
   },
   {
@@ -31,14 +31,6 @@
       "space w": "pane::CloseActiveItem",
       "space n": "tab_switcher::Toggle",
       "space space": "file_finder::Toggle",
-    },
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-s": "pane::ActivatePreviousItem",
-      "ctrl-t": "pane::ActivateNextItem",
     },
   },
   {
@@ -64,6 +56,15 @@
       //"ctrl-d": ["action::Sequence", [["workspace::SendKeystrokes", "4 j"], "editor::ScrollCursorCenter"]],
       "ctrl-u": ["workspace::SendKeystrokes", "4 ctrl-y"],
       "ctrl-d": ["workspace::SendKeystrokes", "4 ctrl-e"],
+      "ctrl-t": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-s": "pane::ActivatePreviousItem",
+      "ctrl-t": "pane::ActivateNextItem",
     },
   },
 ]
