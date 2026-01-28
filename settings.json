@@ -85,7 +85,7 @@
   // Completions & hints
   "auto_signature_help": true,
   "hover_popover_enabled": false,
-  "inlay_hints": { "enabled": true },
+  "inlay_hints": { "enabled": false },
   "show_completions_on_input": false,
   "show_signature_help_after_edits": true,
   "use_autoclose": false,
