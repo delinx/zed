@@ -1,15 +1,8 @@
 // Zed settings - https://zed.dev/docs/configuring-zed
 {
   // Extensions
-  "text_rendering_mode": "platform_default",
-  "semantic_tokens": "off",
-  "title_bar": {
-    "show_user_picture": false,
-    "show_user_menu": false,
-    "show_sign_in": false,
-  },
   "debugger": {
-    "stepping_granularity": "statement",
+    "stepping_granularity": "statement"
   },
   "auto_install_extensions": {
     "django": true,
@@ -77,7 +70,7 @@
   "vertical_scroll_margin": 2,
 
   // Indentation
-  "auto_indent": "syntax_aware",
+  "auto_indent": true,
   "auto_indent_on_paste": true,
   "indent_guides": {
     "enabled": true,
@@ -104,7 +97,7 @@
     "words": "enabled",
     "words_min_length": 2,
     "lsp": true,
-    "lsp_fetch_timeout_ms": 1000,
+    "lsp_fetch_timeout_ms": 0,
     "lsp_insert_mode": "replace",
   },
 
@@ -140,7 +133,6 @@
 
   // Tabs
   "tab_bar": {
-    "show_pinned_tabs_in_separate_row": false,
     "show": true,
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": true,
@@ -172,7 +164,6 @@
 
   // Project panel
   "project_panel": {
-    "bold_folder_labels": true,
     "dock": "right",
     "default_width": 240,
     "button": true,
@@ -187,7 +178,7 @@
     "folder_icons": false,
     "git_status": true,
     "hide_hidden": false,
-    "hide_root": true,
+    "hide_root": false,
     "show_diagnostics": "errors",
     "sticky_scroll": false,
     "indent_guides": { "show": "always" },

@@ -28,6 +28,7 @@
       "space c": "command_palette::Toggle",
       "space f f": "file_finder::Toggle",
       "space f p": "pane::DeploySearch",
+      "space f s": "project_symbols::Toggle",
       "space w": "pane::CloseActiveItem",
       "space n": "tab_switcher::Toggle",
       "space space": "file_finder::Toggle",
